@@ -1,0 +1,62 @@
+<head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+<div class="banner animated_tada">
+    <div class="big-text">Exam Success Trigger</div>
+    <a href="https://www.est.com.ng" target="-blank">Visit: www.est.com.ng</a>
+    <p>by</p>
+    <a style="background: #333;"><p class="text" style="border-style: unset; background: rgb(235, 54, 114); color: white;">Chidi Anumudu</p></a>
+    <p style="background: rgb(0, 221, 255); font-size: 35px; font-family: cursive; margin-bottom: 100px;">publishers: firmfences cyberprotection co.</p>
+    <div></div>
+</div>
+<style>
+    a .text{
+        background: #333;
+    }
+    div a:nth-child(4):hover{
+        pointer-events: fill;
+        background: rgb(90, 84, 84);
+        transition: 5s;
+        animation: lightSpeedInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+        animation-delay: 1s;
+    }
+    .banner{
+        box-sizing: border-box;
+        width: 100%;
+        background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEvu0b5x7D77Bm4BLMoPkKaE5x-K3gkezUwg&usqp=CAU");
+        background-size: cover;
+        font-size: 80px;
+        color: rgb(79, 65, 65);
+        text-align: center;
+        padding: 40px 15px;
+        margin: 0 0.5rem;
+        animation: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+        animation-delay: 1s;
+    }
+    .big-text{
+        animation: rotateInDownLeft; /* referring directly to the animation's @keyframe declaration */
+        animation-duration: 2s; /* don't forget to set a duration! */
+        animation-delay: 1s;
+        font-size: 130px;
+        font-weight: 800;
+    }
+    .banner a{
+        display: inline-block;
+        background: #fff;
+        color: #333;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 40px;
+        padding: 15px;
+        transition: .3s;
+    }
+    .banner a:hover{
+        background: #333;
+        color: #fff;
+    }
+</style>

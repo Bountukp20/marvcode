@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+</head>
+<body>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: cornflowerblue;
+            background-image: linear-gradient(315deg, cornflowerblue 0%, hsl(0, 76%, 89% ) 100%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+        .Quiz-container{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px 2px hsl(0, 0%, 0%);
+            width: 600px;
+            overflow: hidden;
+        }
+        .quiz-header{
+            padding: 4rem;
+        }
+        h2{
+            padding: 1rem;
+            text-align: center;
+            margin: 0;
+        }
+        ul{
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li{
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        ul li label{
+            cursor: pointer;
+        }
+        button{
+            background-color: rgb(100, 237, 173);
+            color: white;
+            border: none;
+            display: block;
+            width: 100%;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-family: inherit;
+            padding: 1.3rem;
+        }
+        button:hover{
+            background-color: rgb(100, 237, 235);
+        }
+        button:focus{
+            outline: none;
+            background-color: #44b927;
+        }
+    </style>
+    <div class="Quiz-container" id="quiz">
+        <div class="quiz-header">
+            <h2 id="question">Question Text</h2>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Answer</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Answer</label>
+                </li>
+                <li>
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Answer</label>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Answer</label>
+                </li>
+            </ul>
+        </div>
+    <button id="submit">Submit</button>
+    </div>
+    <script>
+        const quizData = [
+            {
+                question: "1.  Which language runs in web browser?",
+                a: "Java",
+                b: "C",
+                c: "Python",
+                d: "JavaScript",
+                correct: "d",
+            },
+            {
+                question: "2.  What is the full meaning of HTML?",
+                a: "Cascading Style Sheet",
+                b: "Hyper Text Markup Language",
+                c: "Central Intelligence Agency",
+                d: "I don't still know",
+                correct: "b",
+            },
+            {
+                question: "3.  Which of these is an open tag?",
+                a: "<input/>",
+                b: "<head></head>",
+                c: "<body></body>",
+                d: "<section></section>",
+                correct: "a",
+            },
+            {
+                question: "4.  What is the difference between a designer and a developer?",
+                a: "A designer is one that designs clothes, while a developer is one who develops a society",
+                b: "A designer and a developer in the world of programming are the same",
+                c: "A designer in programming is one who beautifies an already built website, while a developer is one who is capable of making and designing a once non-existence website",
+                d: "I don't know",
+                correct: "c",
+            },
+            {
+                question: "5.  What is HTML?",
+                a: "A scripting language",
+                b: "A Markup Language",
+                c: "A style language",
+                d: "A programming language",
+                correct: "b",
+            },
+            {
+                question: "6.  Which of these are styling languages?",
+                a: "Bootstrap and CSS",
+                b: "HTML and XML",
+                c: "JavaScript and Java",
+                d: "C#, C++ and C",
+                correct: "a",
+            },
+            {
+                question: "7.  Do you have to be good at Math to be a good developer?",
+                a: "Yes",
+                b: "No",
+                c: "Maybe",
+                d: "I not sure",
+                correct: "b",
+            },
+            {
+                question: "8.  Which of this is a program used by programmers to write codes?",
+                a: "Microsoft word",
+                b: "Command prompt",
+                c: "Notepad++",
+                d: "none of the above",
+                correct: "c",
+            },
+            {
+                question: "9.  Between one that uses a website builder to create his website and one that develops it himself from scratch, who is better?",
+                a: "Both",
+                b: "The one who uses a website builder",
+                c: "The one that develops it himself",
+                d: "none of them",
+                correct: "c",
+            },
+            {
+                question: "10.  What is the right pronunciation to the acronym SQL?",
+                a: "S-Q-L",
+                b: "Sequel",
+                c: "Both A and B",
+                d: "I have no idea",
+                correct: "c",
+            },
+            {
+                question: "11.  What is the full meaning of SQL?",
+                a: "Steady Queue of line",
+                b: "Structured Query Language",
+                c: "Structural Query Language",
+                d: "I don't know",
+                correct: "b",
+            },
+            {
+                question: "12.  What is the meaning of DOM?",
+                a: "Document Object Model",
+                b: "Drop on Mail",
+                c: "Dropped on me",
+                d: "Death of Man",
+                correct: "a",
+            },
+            {
+                question: "13.  What is the anchor tag used for?",
+                a: "To create a link",
+                b: "To strengthen your html code",
+                c: "I don't know",
+                d: "It is used to make the text look bold",
+                correct: "a",
+            },
+            {
+                question: "14.  Does the hyperlink apply to only text?",
+                a: "Yes",
+                b: "No",
+                c: "Maybe",
+                d: "I don't have a single clue",
+                correct: "b",
+            },
+            {
+                question: "15.  What is a port in a network?",
+                a: "Data entry point",
+                b: "Communication endpoint",
+                c: "A door to heaven",
+                d: "I don't know",
+                correct: "b",
+            },
+            {
+                question: "16.  What does HTTP stand for?",
+                a: "Hypertext Transfer Protocol",
+                b: "HTML Transfer Protocol",
+                c: "Hero Transfer Protocol",
+                d: "I don't know",
+                correct: "a",
+            },
+            {
+                question: "17.  What are the three classifications of development?",
+                a: "FrontEnd, BackEnd and FullStack Engineering",
+                b: "Web, app and software development",
+                c: "Computer, Electrical and Analytic Engineering",
+                d: "I don't know",
+                correct: "a",
+            },
+            {
+                question: "18.  What is FrontEnd Development in simple terms?",
+                a: "Development that deals with the server side",
+                b: "Development that deals with the internet",
+                c: "Development that deals with the client side",
+                d: "I don't know",
+                correct: "c",
+            },
+            {
+                question: "19. Who is a FullStack Engineer?",
+                a: "Someone that is a master of both FrontEnd and BackEnd Engineering",
+                b: "Someone is a Web Developer",
+                c: "Someone is who makes engines",
+                d: "I don't know",
+                correct: "a",
+            },
+            {
+                question: "20.  What are referred to as Languages?",
+                a: "Our basic way of speaking",
+                b: "The language of sign",
+                c: "Subtitle",
+                d: "They are the languages used for developing things like website, apps and games e.t.c.",
+                correct: "d",
+            },
+        ];
+        const quiz = document.getElementById('quiz')
+        const answerEls = document.querySelectorAll('.answer')
+        const questionEl = document.getElementById('question')
+        const a_text = document.getElementById('a_text')
+        const b_text = document.getElementById('b_text')
+        const c_text = document.getElementById('c_text')
+        const d_text = document.getElementById('d_text')
+        const submitBtn = document.getElementById('submit')
+
+        let currentQuiz = 0
+        let score = 0
+
+        loadQuiz()
+
+        function loadQuiz() {
+
+            deselectAnswers()
+            
+            const currentQuizData = quizData[currentQuiz]
+            questionEl.innerText = currentQuizData.question
+            a_text.innerText = currentQuizData.a
+            b_text.innerText = currentQuizData.b
+            c_text.innerText = currentQuizData.c
+            d_text.innerText = currentQuizData.d
+        }
+        function deselectAnswers() {
+            answerEls.forEach(answerEl => answerEl.checked = false)
+        }
+        function getSelected(){
+            let answer
+            answerEls.forEach(answerEl => {
+                if(answerEl.checked) {
+                    answer = answerEl.id
+                }
+            })
+            return answer
+        }
+        submitBtn.addEventListener('click', () => {
+            const answer = getSelected()
+            if(answer) {
+                if(answer == null){
+                    alert("Please pick an option")
+                    return
+                }
+                else if(answer === quizData[currentQuiz].correct){
+                    score++
+                }
+                else{
+                    alert("That answer is wrong. The correct answer to this question is option "+ quizData[currentQuiz].correct)
+                }
+                currentQuiz++
+                if(currentQuiz < quizData.length){
+                    loadQuiz()
+                }
+                else {
+                    quiz.innerHTML = `
+                    <h2>Your average score is ${score/quizData.length*100}%</h2>
+                    <button onclick="location.reload()">Retry</button>
+                    `
+                }
+                // score
+                // if((score++ < 7)){
+                //     alert("Better success next time");
+                //     return
+                // }
+            }
+        })
+        alert("Welcome Users to Marvcode quiz game. This quiz game requires that you pick from the options lettered 'a' to 'd'.Please choose your answer correctly as there is no coming back to the same question, unless you reload the game. This game has no review as this is to quickly test your knowledge about programming, but there is an immediate remark to any wrong answers you pick. It is a quick quiz, and not really serious. So don't panic and just enjoy the quiz.")
+    </script>
+</body>
+</html>

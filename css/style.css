@@ -301,12 +301,12 @@ nav{
         font-size: 10px;
         border-right: 7px;
     }
-    .code{
-        font-size: 10px;
-        margin-right: 800px;
+    h1 .code{
+        font-size: 1.2em;
+        margin-right: 100%;
     }
     .Port{
-        font-size: 30px;
+        font-size: 1.2em;
         text-align: center;
     }
     .dropdown{

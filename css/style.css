@@ -813,7 +813,7 @@ footer{
         color: white;
     }
     body{
-        background: #2c3e50;
+        background: #516e6f;
     }
     /* @media(max-width: 900px){
         .col-md-7 about-right{
@@ -1165,7 +1165,8 @@ input[type=submit] {
     margin: 15px 0;
 } */
 body{
-    background: url("../Marvcode Images/background img.jpg");
+    /* background: url("../Marvcode Images/background img.jpg"); */
+    background: #404744;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

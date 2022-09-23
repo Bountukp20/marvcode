@@ -78,7 +78,7 @@
                 font-size: 1.5em;
             }
             .content-section{
-                margin-top: 200px;
+                margin-top: 100px;
             }
             @media(max-width: 990px){
                 .container{
@@ -211,7 +211,10 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: space-around;
-                    margin-top: 150%;
+                    margin-top: 40%;
+                }
+                .tri, .mid, .down{
+                    display: none;
                 }
             }
             @media(max-width: 768px){
@@ -448,21 +451,36 @@
                     margin-top: 60%;
                 }
             }
+            .p-first{
+                color: #fff;
+            }
+            .about-img{
+                float: center;
+            }
+            .a-color{
+                color: rgb(17, 231, 170);
+            }
+            .tri{
+                position: absolute;
+                left: 35%;
+                top: 50%;
+                width: 20px;
+                height: 20px;
+            }
+            .mid{
+                position: absolute;
+                left: 40%;
+                top: 50%;
+            }
+            .down{
+                position: absolute;
+                left: 45%;
+                top: 50%;
+            }
         </style>
-        <section id="about">
-            <h1 class="heading">About</h1>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="about-img">
-                            <img src="data:image/jpeg;base64,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" alt="" srcset="" style="image-rendering: pixelated;">
-                            <img src="data:image/png;base64,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" alt="" srcset="" style="image-rendering: pixelated;">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-        </section>    
+        <div class="tri"><img src="Marvcode Images/Polygon_1-removebg-preview.png"></div>
+        <div class="mid"><img src="Marvcode Images/Polygon_1-removebg-preview.png"></div>
+        <div class="down"><img src="Marvcode Images/Polygon_1-removebg-preview.png"></div>
         <section id="about"><h1>About</h1>
             <section class="col-md-7 about-right">
                 <h2 class="color-3" style="margin-left: 200px;"><b>About Me</b></h2>
@@ -470,7 +488,7 @@
                     Welcome to MarvCode portfolio Website.
                     This website was developed by Marvel Ukpong.
                     <br><br>I and my team are a groups of web Designers, Developers and Marketers. I am a Python/Django Developer.
-                    Together as a team we create websites, fun games, and web apps. I also inspire to be a Robotics Engineer. You can read more about myself by clicking the Resume link <a href="My Resume.html" target="_blank">here</a>, and learn more about my team by visiting their linkedin page. This website exhibits our skills, knowledge and works that we have acquired and worked on over time.
+                    Together as a team we create websites, fun games, and web apps. I also inspire to be a Robotics Engineer. You can read more about myself by clicking the Resume link <a href="My Resume.html" target="_blank" class="a-color">here</a>, and learn more about my team by visiting their linkedin page. This website exhibits our skills, knowledge and works that we have acquired and worked on over time.
                     <!-- <br><br>You could also hit the subscribe button if you want to know more on coding for free.
                     Links will be sent to your gmail account once you have subscribed. -->
                 </p>
@@ -575,18 +593,19 @@
                             <p>We help build highly functional softwares for the world's advancement.</p>
                             <h3>-Web development</h3>
                             <p>Looking to own a functional website at the possible cheapest price available? 
-                            You are on the right place.</p>
-                            <p>Everything starts with a website. We build your business website, including Web Applications.</p>
-                            <p>We will get you there.</p>
-                            <h3>Why use us</h3>
-                            <p> Together as a team, we know the deployment, server and security, and we also know what it means for a website to be responsive and user friendly, and so we perform at our very best and top speed, and also assuring you that we will give you 100% web solution.</p>
+                            You are in the right place.</p>
+                            <p>Everything starts with a website. 
+                                We will get you there.</p>
+                            <p>We build website, including Web Apps, them Mobile Apps</p>
+                            <h3>Why hire us</h3>
+                            <p> I know the deployment, server and security, and we also know what it means for a website to be responsive and user friendly, and so we perform at our very best and top speed, and also assuring you that I will give you 100% web solution..</p>
                             <br><br><br>
                     </div>
                 </div>
             </div>
         </div><br><br><br><br><br><br><br><br>
         <div style="margin-bottom: 5%; width: 49%; float: right;">
-            <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center;">Our skills</h1>
+            <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center;">Our skills and knowledge</h1>
             <p class="size" style="color: rgb(203, 200, 200);">HTML</p>
             <div class="contain">
             <div class="skills html">98.7%</div>

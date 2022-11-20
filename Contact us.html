@@ -37,6 +37,12 @@
         position: absolute;
         right: 12%;
       }
+      .btn{
+        float: right;
+      }
+      .contact-section{
+        background: transparent;
+      }
       @media(max-width: 991px){
                 /* .container{
                     width: 100%;
@@ -73,9 +79,12 @@
                   display: inline-flex;
                 }
                 .social .fas{
-                  margin-top: 100px;
+                  margin-top: 500px;
                   display: inline-flex;
-                  float: left;
+                  float: right;
+                  left: 100%;
+                  color: black;
+                  width: 50%;
                 }
                 h5{
                     font-size: 40px;
@@ -149,7 +158,20 @@
                   font-size: 0.4em;
                 }
                 .btn-danger{
-                  width: 110%;
+                  width: 30%;
+                  float: left;
+                }
+                form{
+                  width: 120%;
+                }
+                .text-white{
+                  float: left;
+                }
+                .circle-1{
+                  display: none;
+                }
+                .circle-2{
+                  display: none;
                 }
             }
             @media(max-width: 768px){
@@ -161,7 +183,7 @@
                 width: 200%;
               }
               .btn{
-                width: 100%;
+                width: 50%;
               }
               .ic{
                 float: left;
@@ -174,18 +196,39 @@
                 position: absolute;
                 right: 45%;
               }
+              .text-white{
+                position: absolute;
+                top: 100%;
+              }
             }
             .fas{
+              color: black;
               position: absolute;
               display: inline;
             }
+            .fa{
+              color: black;
+            }
             .phon{
               position: absolute;
-              float: left;
-              left: 35%;
+              float: right;
+              left: 65%;
             }
             .text-white{
               color: white;
+            }
+            .circle-1{
+              position: absolute;
+              bottom: 0%;
+              top: 70%;
+              height: 45%;
+              left: 10%;
+            }
+            .circle-2{
+              height: 60%;
+            }
+            .social{
+              width: 2%;
             }
     </style>
     <section class="phone">
@@ -207,96 +250,103 @@
           <p><i class="fas fa-clock ia"></i><h3>Working time:</h3></p> <p>Mon-Fri 8:00 AM to 5:00 PM</p>
         </div>
       </div>
+      <div class="circle-1">
+        <img src="Marvcode Images/decorative-circle.png" alt="circle">
+      </div>
       <p class="blue-c"></p>
       <div class="half-width">
         <div class="contact-form">
-            <form action="mailto:marvcode.co@gmail.com" method="post" enctype="text/plain" id="main_contact_form" autocomplete="on">
+            <form action="subscriberform.php" method="post" id="main_contact_form" autocomplete="on">
                 <div class="wrapper">
                     <div class="input-fields">
                         <div style="background-color: transparent;">
-                            <form action="mailto:marvcode.co@gmail.com" method="post" enctype="text/plain" style="background-color: transparent;" autocomplete="on">
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="fname" style="color: cadetblue;">First Name:</label>
-                                </div>
-                                <div class="col-75">
-                                  <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="lname" style="color: cadetblue;">Last Name:</label>
-                                </div>
-                                <div class="col-75">
-                                  <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="email" style="color: cadetblue;">Email:</label>
-                                </div>
-                                <div class="col-75">
-                                  <input type="email" name="email" id="email" placeholder="Email Address" required>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="country" style="color: cadetblue;">Country:</label>
-                                </div>
-                                <div class="col-75">
-                                  <select id="country" name="country">
-                                    <option disabled selected value> -- select a country -- </option>
-                                    <option value="australia">Australia</option>
-                                    <option value="canada">Canada</option>
-                                    <option value="usa">USA</option>
-                                    <option value="nigeria">Nigeria</option>
-                                    <option value="england">England</option>
-                                    <option value="japan">Japan</option>
-                                    <option value="ghana">Ghana</option>
-                                    <option value="india">India</option>
-                                    <option value="iceland">Iceland</option>
-                                    <option value="liberian">Liberian</option>
-                                    <option value="malaysia">Malaysia</option>
-                                    <option value="mexico">Mexico</option>
-                                    <option value="new taiwan">New Taiwan</option>
-                                    <option value="new zealand">New Zealand</option>
-                                    <option value="south africa">South Africa</option>
-                                    <option value="singapore">Singapore</option>
-                                    <option value="brazil">Brazil</option>
-                                    <option value="russia">Russia</option>
-                                    <option value="others">Others</option>
-                                  </select>
-                                </div>
-                              </div>
-                              <div>
-                                <input type="hidden" name="_next" value="https://marvie.onuniverse.com/Marvcode portfolio/thankyou.html">
-                              </div>
-                              <div class="row">
-                                <div class="col-25">
-                                  <label for="subject" style="color: cadetblue;">Message:</label>
-                                </div>
-                                <div class="col-75">
-                                  <textarea id="subject" name="subject" placeholder="Type your Message here..." style="height:200px" cols="30" spellcheck="a-z" required></textarea>
-                                </div>
-                              </div>
-                              <div class="row">
-                                <input type="submit" value="Submit">
-                              </div>
-                            </form>
-                    </div>  
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="fname" style="color: cadetblue;">First Name:</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="lname" style="color: cadetblue;">Last Name:</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="email" style="color: cadetblue;">Email:</label>
+                            </div>
+                            <div class="col-75">
+                              <input type="email" name="email" id="email" placeholder="Email Address" required>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="country" style="color: cadetblue;">Country:</label>
+                            </div>
+                            <div class="col-75">
+                              <select id="country" name="country">
+                                <option disabled selected value> -- select a country -- </option>
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                                <option value="nigeria">Nigeria</option>
+                                <option value="england">England</option>
+                                <option value="japan">Japan</option>
+                                <option value="ghana">Ghana</option>
+                                <option value="india">India</option>
+                                <option value="iceland">Iceland</option>
+                                <option value="liberian">Liberian</option>
+                                <option value="malaysia">Malaysia</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="new taiwan">New Taiwan</option>
+                                <option value="new zealand">New Zealand</option>
+                                <option value="south africa">South Africa</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="brazil">Brazil</option>
+                                <option value="russia">Russia</option>
+                                <option value="others">Others</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div>
+                            <input type="hidden" name="_next" value="https://marvie.onuniverse.com/Marvcode portfolio/thankyou.html">
+                          </div>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="subject" style="color: cadetblue;">Message:</label>
+                            </div>
+                            <div class="col-75">
+                              <textarea id="subject" name="subject" placeholder="Type your Message here..." style="height:200px" cols="30" spellcheck="a-z" required></textarea>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <input type="submit" value="Submit">
+                          </div>
+                    </div>
+                  </div>
                 </div>
             </form>
         </div>
+      </div>
+      <div class="circle-2">
+        <img src="Marvcode images/upside-down circle.png" alt="circle">
       </div>
       <p class="text-white">Please feel free to visit my blog to learn more on coding if you are a beginner.
       </p>
       <!-- this hire me will would automatically send a mail with a pre written subject and content -->
       <h3 class="color-3 social-link-text">
-      <button class="btn btn-danger"><a href="mailto:marvcode.co@gmail.com?subject=I am employing your services&body=I have seen your qualifications and I have seen great credentials in you. So I would like to hire you. How can I reach you?" method="post">Hire Me</a></button>
+        <a href="mailto:marvcode.co@gmail.com?subject=I am employing your services&body=I have seen your qualifications and I have seen great credentials in you. So I would like to hire you. How can I reach you?" method="post">
+          <button class="btn btn-danger">Hire Me</button>
+        </a>
       </h3>
-      <button class="btn btn-danger">
-        <a href="index.html">Back</a>
-      </button>
+      <a href="index.html">
+        <button class="btn btn-danger">Back</button>
+      </a>
       <div class="social">
         <p class="faj">
         <!-- <a href="https://www.facebook.com/avon.pat.9" target="_blank"><i class="fab fa-facebook-f"></i></a>  

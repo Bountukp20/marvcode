@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10; url=Marvcode.dashboard.html">
+    <title>Thank you</title>
+</head>
+<body>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css?family=Bad+'); */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Bad Script', cursive;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #111;
+        }
+        h2{
+            display: flex;
+            color: transparent;
+            font-size: 15vw;
+        }
+        h2 span{
+            animation: animate 2s linear infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes animate{
+            0%{
+                color: #fff;
+                filter: blur(2px) hue-rotate(0deg);
+                text-shadow: 0 0 10px #c325e2,
+                0 0 20px #00ffc3,
+                0 0 40px #2cd885,
+                0 0 80px #8e3df1,
+                0 0 120px #9dc217,
+                0 0 200px #033c55,
+                0 0 300px #ff00e1,
+                0 0 400px #ff0000;
+            }
+            30%,70%{
+                color: #fff;
+                filter: blur(2px) hue-rotate(360deg);
+                text-shadow: 0 0 10px #21c918,
+                0 0 20px #00b3ff,
+                0 0 40px #6b43e2,
+                0 0 80px #11a08a,
+                0 0 120px #99d40e,
+                0 0 200px #ff00cc;
+            }
+            100%{
+                color: transparent;
+                box-shadow: none;
+                filter: blur(2px) hue-rotate(0deg);
+            }
+        }
+    </style>
+    <h2><span style="--i:1">T</span>
+        <span style="--i:2">h</span>
+        <span style="--i:3">a</span>
+        <span style="--i:4">n</span>
+        <span style="--i:5">k</span>
+        <span style="--i:6; margin-left: 5vw;">Y</span>
+        <span style="--i:7">o</span>
+        <span style="--i:8">u</span>
+        <span style="--i:9">!</span>
+    </h2>
+    <script>
+        alert("Please wait for some few seconds we would be there soon.");
+    </script>
+</body>
+</html>

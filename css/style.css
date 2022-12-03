@@ -298,6 +298,7 @@ nav{
 } */
 @media(max-width: 991px){
     .toggle-button{
+        position: fixed;
         display: inline-block;
         cursor: pointer;
         margin-right: 80%;

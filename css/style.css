@@ -4,6 +4,28 @@
     border: 0px;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* CSS Variables */
+:root {
+  --normal-font: 400;
+  --bold-font: 600;
+  --bolder-font: 900;
+  --primary-color: #0652dd;
+  --secondary-color: #ea2027;
+  --line-height: 1.7rem;
+  --transition: 0.4s ease-in;
+}
+
+/* Smooth scroll effect */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serf;
+}
+
 .container{
     width: 100%;
     height: 100vh;
@@ -176,7 +198,7 @@ nav{
 .toggle-button{
     position: absolute;
     top: .75rem;
-    right: 1rem;
+    right: 2rem;
     display: none;
     flex-direction: column;
     justify-content: space-around;
@@ -276,12 +298,28 @@ nav{
 } */
 @media(max-width: 991px){
     .toggle-button{
-        display: flex;
-        margin-left: 60px;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 80%;
+        font-size: 1.7em;
     }
-    .toggle-button:hover, .bar:hover{
-        color: rgb(78, 163, 219);
-    }
+    .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: rgb(135, 214, 166);
+        margin: 6px 0;
+        transition: 0.4s;
+      }
+      
+      .change .bar1 {
+        transform: translate(0, 11px) rotate(-45deg);
+      }
+      
+      .change .bar2 {opacity: 0;}
+      
+      .change .bar3 {
+        transform: translate(0, -11px) rotate(45deg);
+      }
     .container{
         width: 100%;
         height: 50%;
@@ -367,8 +405,8 @@ nav{
     .navbar{
         display: block;
         justify-content: uppercase;
-        justify-items: right;
-        align-items: flex-end;
+        justify-items: center;
+        align-items: center;
         color: rgb(53, 73, 155);
     }
     .brand-title{
@@ -376,41 +414,35 @@ nav{
         margin: -0.1px;
     }
     .navbar-links{
-        width: 100%;
+        display: none;
+        width: 50%;
         height: 100%;
     }
     .navbar-links ul{
-        margin-left: 10%;
-        margin-right: 20px;
-        margin-bottom: 5px;
-        padding-bottom: 10px;
-        margin-top: 10px;
-        overflow: visible;
-        display: initial;
-        border: 40px;
-        float: left;
+        flex-direction: column;
+        top: 5rem;
         position: fixed;
         background-color: wheat;
         text-align: center;
-        justify-content: initial;
-        height: 100%;
-        width: 100px;
-        /* appearance: none; */
-        transition: .4s;
-        -webkit-transition: .4s;
-        -moz-transition: .4s;
-        -ms-transition: .4s;
-        -o-transition: .4s;
-        left: 65%;
+        height: 80%;
+        width: 100%;
+        /*appearance: none;
+        */transition: 1.4s;
+        -webkit-transition: 1.4s;
+        -moz-transition: 1.4s;
+        -ms-transition: 1.4s;
+        -o-transition: 1.4s;
+        left: 0;
+        z-index: 1;
 }
     .navbar-links li{
         list-style: none;
         display: block;
-        left: 0px;
-        right: 560px;
-        justify-content: left;
-        padding: 20px 2%;
-        font-size: 20px;
+        text-align: center;
+        padding: 27px 2%;
+        margin-left: 40%;
+        justify-items: center;
+        font-size: 1.7em;
     }
     .navbar-links li a{
         padding: 1rem;
@@ -418,15 +450,17 @@ nav{
         text-decoration: none;
         /* background-color: #003333; */
         color: rgb(53, 73, 155);
-        margin-left: -10px;
-        font-size: 20px;
+        justify-items: center;
+        font-size: 1.3em;
         text-transform: uppercase;
-        font-weight: bold;
         border: 1px solid transparent;
         padding: 0px 0px;
         border-radius: 3px;
-        float: left;
+        flex-direction: column;
         justify-content: space-between;
+        text-align: center;
+        width: 20%;
+        z-index: 1;
     }
     .navbar-links li a.active, a:hover{
         background: light grey;

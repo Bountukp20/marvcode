@@ -47,7 +47,7 @@
           right: 26%;
           bottom: 32%;
         }
-          @media(max-width: 991px) {
+          @media screen and (max-width: 991px) {
             .vl {
               display: none;
             }
@@ -68,7 +68,11 @@
             }
             .fa-globe{
               position: absolute;
-              right: 5.5%;
+              right: 5%;
+            }
+            .mu{
+              top: 72%;
+              left: 38.1%;
             }
         }
         @media(max-width: 768px) {
@@ -77,9 +81,6 @@
               bottom: 0;
               top: 550px;
               left: 65%;
-            }
-            .mu{
-              bottom: 79%;
             }
         }
         @media(max-width: 375px) {
@@ -257,11 +258,14 @@
                             <span class="bar"></span>
                             <span class="bar"></span>
                         </a> -->
-                        <div><a href="#"  class="toggle-button" onclick="nav()" id="navy">
-                            <i class="fa fa-bars" style="left: 0;"></i> 
-                        </a>
+                        <div class="toggle-button" onclick="nav(this)" id="navy">
+                          <div class="bar1"></div>
+                          <div class="bar2"></div>
+                          <div class="bar3"></div>
+                        </div>
                         <script>
-                            function nav() {
+                            function nav(x){
+                              x.classList.toggle("change");
                               var x = document.getElementById('nav');
                               if (x.style.display == 'block') {
                                 x.style.display = 'none';
@@ -273,16 +277,16 @@
                         </script>
                         <div class="navbar-links" id="nav">
                             <ul>
-                                <li><i class="fas fa-home"></i><a href="#home" class="active">Home</a></li>
-                                <li><i class="fas fa-address-card"></i><a href="About portfolio.html">About</a>
+                                <li><i class="fas fa-home hi"></i><a href="#home" class="active">Home</a></li>
+                                <li><i class="fas fa-address-card hi"></i><a href="About portfolio.html">About</a>
                                 </li>
-                                <li><i class="fas fa-briefcase"></i><a href="project.html">Project</a></li>
-                                <li><i class="fas fa-comments"></i><a href="Contact us.html" target="-blank">Feedback</a></li>
-                                <li><i class="fa fa-globe"></i><a href="https://avonpat.websites.co.in" target="-blank" class="mu">Website</a>
+                                <li><i class="fas fa-briefcase hi"></i><a href="project.html">Project</a></li>
+                                <li><i class="fas fa-comments hi"></i><a href="Contact us.html" target="-blank">Feedback</a></li>
+                                <li><i class="fa fa-globe hi"></i><a href="https://avonpat.websites.co.in" target="-blank" class="mu">Website</a>
                                 </li>
-                                <li><i class="fas fa-blog"></i><a href="https://marvcode.blogspot.com" target="-blank">Blog</a></li>
+                                <li><i class="fas fa-blog hi"></i><a href="https://marvcode.blogspot.com" target="-blank">Blog</a></li>
                             </ul>   
-                        </div></div>
+                        </div>
                     </nav>
                 </div>
                 <div class="trapezoid"></div>

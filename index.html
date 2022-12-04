@@ -37,10 +37,9 @@
           background: wheat;
           border-radius: 5px;
           position: absolute;
-          top: 64%;
+          top: 54%;
           right: 50px;
           transform: translateY(-50%);
-          position: fixed;
         }
           @media screen and (max-width: 991px) {
             .vl {
@@ -50,10 +49,9 @@
               background: wheat;
             }
             .social{
-              float: bottom;
-              bottom: 0;
-              top: 550px;
-              left: 75%;
+              position: absolute;
+              left: 77%;
+              bottom: 270%;
             }
             .vl{
               display: none;
@@ -65,29 +63,10 @@
               position: absolute;
               right: 5%;
             }
-        }
-        @media(max-width: 768px) {
-            .social{
-              float: bottom;
-              bottom: 0;
-              top: 550px;
-              left: 65%;
-            }
-        }
-        @media(max-width: 375px) {
-            .social{
-              float: bottom;
-              bottom: 0;
-              top: 550px;
-              left: 75%;
-            }
-        }
-        @media(max-width: 425px) {
-            .social{
-              float: bottom;
-              bottom: 0;
-              top: 515px;
-              left: 57%;
+            .content{
+              top: 30%;
+              margin-left: 20%;
+              width: 10%;
             }
         }
         .icon-box{
@@ -305,8 +284,10 @@
                   </div>
                 </div>
                   <div class="content">
-                    <p><h1 class="code" style="font-size: 2.5em; text-align: center;">Marv<span class="auto-fill"></span></h1>
-                    <h1 class="Port" style="font-size: 2.5em; text-align: center; animation: zoomInDown; animation-duration: 2s; ">Portfolio</h1></p>
+                    <p>
+                      <span style="font-size: 3.5em; color: rgba(195, 98, 50, 0.667)" class="auto-fill-2"></span>
+                      <h1 class="code" style="font-size: 2.5em; text-align: center; color: rgba(82, 153, 82, 0.767)">Marv<span class="auto-fill"></span></h1>
+                    <h1 class="Port" style="font-size: 2.5em; text-align: center; animation: zoomInDown; animation-duration: 2s; color: rgba(136, 43, 136, 0.748);">Portfolio</h1></p>
                     <!-- <div class="floating">
                       <img src="Marvcode Images/Marvcodefavicon.png" alt="MarvCode">
                       <img src="Marvcode Images/Marvcodefavicon.png" alt="MarvCode">
@@ -317,7 +298,12 @@
                       var typed = new Typed(".auto-fill", {
                         strings:["code"],
                         typeSpeed: 400,
-                        backSpeed: 200,
+                        backSpeed: 300,
+                        loop: true
+                      })
+                      var type2 = new Typed(".auto-fill-2", {
+                        strings: ["Welcome to"],
+                        typeSpeed: 200,
                         loop: true
                       })
                     </script>

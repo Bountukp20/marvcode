@@ -410,7 +410,11 @@ nav{
         align-items: center;
         color: rgb(53, 73, 155);
     }
+    label{
+        margin-left: 50%;
+    }
     .brand-title{
+        display: none;
         font-size: 20px;
         margin: -0.1px;
     }

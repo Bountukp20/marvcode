@@ -272,7 +272,7 @@
                 position: absolute;
                 color: #eee;
                 cursor: pointer;
-                font-size: 2em;
+                font-size: 2em; 
                 top: 50%;
                 transform: translateY(-50%);
                 transition: all .3s ease-in-out;
@@ -645,10 +645,10 @@
               // Once the container has finished, the scroll appears
               if ($('#container').hasClass('loaded')) {
                 // It is so that once the container is gone, the entire preloader section is deleted
-                $('#preloader').delay(9000).queue(function() {
+                $('#preloader').delay(50).queue(function() {
                   $(this).remove();
                 });}
-            }, 3000);});
+            }, 5000);});
         </script>
         <div class="tri"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
         <div class="mid"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
@@ -660,7 +660,7 @@
                     Welcome to MarvCode portfolio Website.
                     This website was developed by Marvel Ukpong.
                     <br><br>I and my team are a groups of web Designers, Developers and Marketers. I am a Python/Django Developer.
-                    Together as a team we create websites, fun games, and web apps. I also inspire to be a Robotics Engineer. You can read more about myself by clicking the Resume link <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format, and learn more about my team by visiting their linkedin page. This website exhibits our skills, knowledge and works that we have acquired and worked on over time.
+                    Together as a team we create websites, fun games, and web apps. I also aspire to be a Robotics Engineer. You can read more about myself by clicking the Resume link <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format, and learn more about my team by visiting their linkedin page. This website exhibits my skills, knowledge and works that I have acquired and worked on in teams over time.
                     <!-- <br><br>You could also hit the subscribe button if you want to know more on coding for free.
                     Links will be sent to your gmail account once you have subscribed. -->
                 </p>
@@ -671,7 +671,7 @@
                 <div class="experience-items">
                     <h3>Python/Django Web Developer</h3>
                     <p class="purple-color">2020 - Present | Entry Level developer</p>
-                    <p class="size">I specialize on using HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus til the course ended, and have acquired certificates on them. Over a 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank">here</a>.</p>
+                    <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus till the course ended, and have acquired certificates on them. Over 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank">here</a>.</p>
                 </div>
             </section>
         </section>
@@ -767,18 +767,18 @@
                             <p>We help build highly functional softwares for the world's advancement.</p>
                             <h3>-Web development</h3>
                             <p>Looking to own a functional website at the possible cheapest price available? 
-                            You are in the right place.</p>
+                            You are at the right place.</p>
                             <p>Everything starts with a website. 
                                 We will get you there.</p>
                             <p>We build website, including Web Apps, then Mobile Apps</p>
                             <h3>Why hire us</h3>
-                            <p> I know the deployment, server and security, and we also know what it means for a website to be responsive and user friendly, and so we perform at our very best and top speed, and also assuring you that I will give you 100% web solution..</p>
+                            <p> I with my team know the deployment, server and security, and we also know what it means for a website to be responsive and user friendly, and so we perform at our very best and top speed, and also assuring you that I will give you 100% web solution..</p>
                             <br><br><br>
                     </div>
                 </div>
             </div>
         </div><br><br><br><br><br><br><br><br>
-        <div style="margin-bottom: 5%; width: 49%; float: right;">
+        <div style="margin-bottom: 5%; width: 39%; float: right;">
             <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center;">Our skills and knowledge</h1>
             <p class="size" style="color: rgb(203, 200, 200);">HTML</p>
             <div class="contain">
@@ -830,65 +830,62 @@
             <button class="btn">&DoubleLeftArrow; Back</button>
         </a>
         <script>
-            // coding with nick
-                // vars
-                'use strict'
-                var testim = document.getElementById("testim"),
-                    testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
-                    testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
-                    testimleftArrow = document.getElementById("left-arrow"),
-                    testimRightArrow = document.getElementById("right-arrow"),
-                    testimSpeed = 4500,
-                    currentSlide = 0,
-                    currentActive = 0,
-                    testimTimer
-                    ;
-                // coding with nick
-                window.onload = function () {
+            // vars
+            'use strict'
+            var testim = document.getElementById("testim"),
+                testimDots = Array.prototype.slice.call(document.getElementById("testim-dots").children),
+                testimContent = Array.prototype.slice.call(document.getElementById("testim-content").children),
+                testimleftArrow = document.getElementById("left-arrow"),
+                testimRightArrow = document.getElementById("right-arrow"),
+                testimSpeed = 4500,
+                currentSlide = 0,
+                currentActive = 0,
+                testimTimer
+                ;
+            window.onload = function () {
 
-                    // Testim Script
-                    function playSlide(slide) {
-                        for (var k = 0; k < testimDots.length; k++) {
-                            testimContent[k].classList.remove("active");
-                            testimContent[k].classList.remove("inactive");
-                            testimDots[k].classList.remove("active");
-                        }
-                        if (slide < 0) {
-                            slide = currentSlide = testimContent.length - 1;
-                        }
-                        if (slide > testimContent.length - 1) {
-                            slide = currentSlide = 0;
-                        }
-                        if (currentActive != currentSlide) {
-                            testimContent[currentActive].classList.add("inactive");
-                        }
-                        testimContent[slide].classList.add("active");
-                        testimDots[slide].classList.add("active");
-
-                        currentActive = currentSlide;
-
-                        clearTimeout(testimTimer);
-                        testimTimer = setTimeout(function () {
-                            playSlide(currentSlide += 1);
-                        }, testimSpeed)
+                // Testim Script
+                function playSlide(slide) {
+                    for (var k = 0; k < testimDots.length; k++) {
+                        testimContent[k].classList.remove("active");
+                        testimContent[k].classList.remove("inactive");
+                        testimDots[k].classList.remove("active");
                     }
-                    // coding with nick
-                    testimleftArrow.addEventListener("click", function () {
-                        playSlide(currentSlide -= 1);
-                    })
-                    testimRightArrow.addEventListener("click", function () {
+                    if (slide < 0) {
+                        slide = currentSlide = testimContent.length - 1;
+                    }
+                    if (slide > testimContent.length - 1) {
+                        slide = currentSlide = 0;
+                    }
+                    if (currentActive != currentSlide) {
+                        testimContent[currentActive].classList.add("inactive");
+                    }
+                    testimContent[slide].classList.add("active");
+                    testimDots[slide].classList.add("active");
+
+                    currentActive = currentSlide;
+
+                    clearTimeout(testimTimer);
+                    testimTimer = setTimeout(function () {
                         playSlide(currentSlide += 1);
-                    })
-
-                    for (var l = 0; l < testimDots.length; l++) {
-                        testimDots[l].addEventListener("click", function () {
-                            playSlide(currentSlide = testimDots.indexOf(this));
-                        })
-                    }
-                    playSlide(currentSlide);
-
+                    }, testimSpeed)
                 }
-// coding with nick
+                // coding with nick
+                testimleftArrow.addEventListener("click", function () {
+                    playSlide(currentSlide -= 1);
+                })
+                testimRightArrow.addEventListener("click", function () {
+                    playSlide(currentSlide += 1);
+                })
+
+                for (var l = 0; l < testimDots.length; l++) {
+                    testimDots[l].addEventListener("click", function () {
+                        playSlide(currentSlide = testimDots.indexOf(this));
+                    })
+                }
+                playSlide(currentSlide);
+
+            }
             
 
         </script>

@@ -24,14 +24,14 @@
 
             .contain {
             width: 100%;
-            background-color: #ddd;
+            background-color: rgb(129, 126, 126);
             justify-content: space-between;
             }
 
             .skills {
             text-align: right;
             height: 2px;
-            color: white;
+            color: black;
             }
 
             .html {width: 98.7%; background-color: hsl(131, 77%, 25%);}
@@ -47,6 +47,7 @@
                 overflow-x: hidden;
             }
             body{
+                background: #e6efec;
                 animation: backInDown;
                 animation-duration: 2s;
             }
@@ -156,7 +157,7 @@
                     width: 100%;
                 }
                 aside{
-                    font-size: 0.7em;
+                    font-size: 0.9em;
                     margin-right: 300px;
                 }
                 a{
@@ -180,7 +181,7 @@
                 .footer{
                     margin-top: 20px;
                     margin-right: 20px;
-                    font-size: 1.4em;
+                    font-size: 1.6em;
                 }
                 .size, footer{
                     font-size: 1.8em;
@@ -189,23 +190,23 @@
                 .skills {
                 text-align: right;
                 height: 5px;
-                color: white;
+                color: black;
                 }
     
                 .html {width: 98.7%; background-color: hsl(131, 77%, 25%);}
-                .css {width: 92.2%; background-color: hsl(177, 77%, 25%);}
-                .js {width: 78.5%; background-color: hsl(52, 77%, 25%);}
-                .python {width: 58%; background-color: hsl(9, 77%, 25%)}
-                .Java{width: 7%; background-color: hsl(154, 77%, 25%);}
+                .css {width: 94.2%; background-color: hsl(177, 77%, 25%);}
+                .js {width: 79.5%; background-color: hsl(52, 77%, 25%);}
+                .python {width: 60%; background-color: hsl(9, 77%, 25%)}
                 .SQL {width: 12%; background-color: hsl(202, 77%, 25%);}
-                .ML {width: 1%; background-color: hsl(0, 77%, 25%);}
+                .ML {width: 9%; background-color: hsl(0, 77%, 25%);}
                 .Design {width: 67%; background-color: hsl(63, 77%, 25%);}
                 .head{
                     font-size: 2.7em;
                     margin-bottom: 10%;
                 }
                 .btn{
-                    margin-bottom: 10%;
+                    font-size: 1.2em;
+                    margin-bottom: 17%;
                     width: 50%;
                     float: right;
                 }
@@ -463,7 +464,11 @@
                 float: center;
             }
             .a-color{
-                color: rgb(17, 231, 170);
+                color: rgb(67, 187, 187);
+            }
+            .a-color:hover{
+                color: red;
+                transition: 0.5s;
             }
             .tri{
                 position: absolute;
@@ -495,6 +500,9 @@
             .curve{
                 margin-left: 25%;
             }
+            .text-white, .experience-items{
+                color: rgb(16, 10, 10);
+            }
             .text{color:brown;font-size:220px;text-align:center;}
             .open{color:green;background:#000;padding:10px;border-radius:20px;}
             
@@ -509,7 +517,7 @@
             .container-preloader .animation-preloader .spin {
               animation: spinner 1s infinite linear;
               border-radius: 50%;  border: 10px solid rgba(0, 0, 0, 0.2);
-              border-top-color: rgb(128, 0, 119); /* It is not in alphabetical order so that you do not overwrite it */
+              border-top-color: rgb(2, 206, 217);
               height: 9em;  margin: 0 auto 3.5em auto; width: 9em;
             }
             /* Loading text */
@@ -545,7 +553,7 @@
               animation-delay: 1.2s;
             }
             .container-preloader .loader-section {
-              background-color: #372d2d;  height: 100%;
+              background-color: #e6efec;  height: 100%;
               position: fixed;  top: 0;  width: calc(50% + 1px);
             }
             .container-preloader .loader-section.section-left {
@@ -612,30 +620,30 @@
         </style>
         <div id="preloader">
             <div id="container" class="container-preloader">
-              <div class="animation-preloader">
+                <div class="animation-preloader">
                 <div class="spin"></div>
                 <div class="txt-loading">
-                  <span preloader-text="M" class="characters">M</span>
-                  
-                  <span preloader-text="a" class="characters">a</span>
-                  
-                  <span preloader-text="r" class="characters">r</span>
-                  
-                  <span preloader-text="v" class="characters">v</span>
-                  
-                  <span preloader-text="c" class="characters">c</span>
-                  
-                  <span preloader-text="o" class="characters">o</span>
-                  
-                  <span preloader-text="d" class="characters">d</span>
+                    <span preloader-text="M" class="characters">M</span>
+                    
+                    <span preloader-text="a" class="characters">a</span>
+                    
+                    <span preloader-text="r" class="characters">r</span>
+                    
+                    <span preloader-text="v" class="characters">v</span>
+                    
+                    <span preloader-text="c" class="characters">c</span>
+                    
+                    <span preloader-text="o" class="characters">o</span>
+                    
+                    <span preloader-text="d" class="characters">d</span>
         
-                  <span preloader-text="e" class="characters">e</span>
+                    <span preloader-text="e" class="characters">e</span>
                 </div>
-              </div>	
-              <div class="loader-section section-left"></div>
-              <div class="loader-section section-right"></div>
+                </div>	
+                <div class="loader-section section-left"></div>
+                <div class="loader-section section-right"></div>
             </div>
-          </div>
+        </div>
           <!-- jQuery -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script>
@@ -671,7 +679,7 @@
                 <div class="experience-items">
                     <h3>Python/Django Web Developer</h3>
                     <p class="purple-color">2020 - Present | Entry Level developer</p>
-                    <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus till the course ended, and have acquired certificates on them. Over 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank">here</a>.</p>
+                    <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus till the course ended, and have acquired certificates on them. Over 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank" class="a-color">here</a>.</p>
                 </div>
             </section>
         </section>
@@ -779,45 +787,41 @@
             </div>
         </div><br><br><br><br><br><br><br><br>
         <div style="margin-bottom: 5%; width: 39%; float: right;">
-            <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center;">Our skills and knowledge</h1>
-            <p class="size" style="color: rgb(203, 200, 200);">HTML</p>
+            <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center; margin-bottom: 10%;">Our skills and knowledge</h1>
+            <p class="size" style="color: rgb(27, 24, 24);">HTML</p>
             <div class="contain">
             <div class="skills html">98.7%</div>
             </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">CSS</p>
+            <p class="size" style="color: rgb(27, 24, 24);">CSS</p>
             <div class="contain">
-            <div class="skills css">92.2%</div>
+            <div class="skills css">94.2%</div>
             </div>
             
-            <p class="size" style="color: rgb(203, 200, 200);">JavaScript</p>
+            <p class="size" style="color: rgb(27, 24, 24);">JavaScript</p>
             <div class="contain">
-            <div class="skills js">78.5%</div>
+            <div class="skills js">79.5%</div>
             </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">Python/Django</p>
+            <p class="size" style="color: rgb(27, 24, 24);">Python/Django</p>
             <div class="contain">
-            <div class="skills python">58%</div>
+            <div class="skills python">60%</div>
             </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">Java</p>
-            <div class="contain">
-            <div class="skills Java">7%</div>
-            </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">SQL</p>
+            <p class="size" style="color: rgb(27, 24, 24);">SQL</p>
             <div class="contain">
             <div class="skills SQL">12%</div>
             </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">ML</p>
+            <p class="size" style="color: rgb(27, 24, 24);">ML</p>
             <div class="contain">
-            <div class="skills ML">1%</div>
+            <div class="skills ML">9%</div>
             </div>
 
-            <p class="size" style="color: rgb(203, 200, 200);">Product Design</p>
+            <p class="size" style="color: rgb(27, 24, 24);">Product Design</p>
             <div class="contain">
-            <div class="skills Design">67%</div>
+            <div class="skills Design">69%</div>
             </div>
         </div>
         <div class="pie"><img src="Marvcode Images/pie.png" alt="chart diagram"></div>

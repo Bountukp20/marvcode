@@ -217,6 +217,7 @@
         }
         footer a{
             color: blue;
+            font-size: 1.4em;;
         }
         footer a:hover{
             color: red;
@@ -241,22 +242,22 @@
           position:absolute; z-index: 100;}
         /* Spinner Loading */
         .container-preloader .animation-preloader .spin {
-          animation: spinner 1s infinite linear;
-          border-radius: 50%;  border: 10px solid rgba(0, 0, 0, 0.2);
-          border-top-color: rgb(128, 0, 119); /* It is not in alphabetical order so that you do not overwrite it */
-          height: 9em;  margin: 0 auto 3.5em auto; width: 9em;
-        }
-        /* Loading text */
-        .container-preloader .animation-preloader .txt-loading {
-          font: bold 5em 'Montserrat', sans-serif;
-          text-align: center;	user-select: none;
-        }
-        .container-preloader .animation-preloader .txt-loading .characters:before {
-          animation: characters 4s infinite;  color: rgb(0, 255, 85);
-          content: attr(preloader-text);  left: 0;
-          opacity: 0;  position: absolute;  top: 0;
-          transform: rotateY(-90deg);
-        }
+            animation: spinner 1s infinite linear;
+            border-radius: 50%;  border: 10px solid rgba(0, 0, 0, 0.2);
+            border-top-color: rgb(2, 206, 217);
+            height: 9em;  margin: 0 auto 3.5em auto; width: 9em;
+          }
+          /* Loading text */
+          .container-preloader .animation-preloader .txt-loading {
+            font: bold 5em 'Montserrat', sans-serif;
+            text-align: center;	user-select: none;
+          }
+          .container-preloader .animation-preloader .txt-loading .characters:before {
+            animation: characters 4s infinite;  color: rgb(0, 255, 85);
+            content: attr(preloader-text);  left: 0;
+            opacity: 0;  position: absolute;  top: 0;
+            transform: rotateY(-90deg);
+          }
         .container-preloader .animation-preloader .txt-loading .characters {
           color: rgba(0, 0, 0, 0.2);	position: relative;
         }
@@ -279,7 +280,7 @@
           animation-delay: 1.2s;
         }
         .container-preloader .loader-section {
-          background-color: #372d2d;  height: 100%;
+          background-color: #e6efec;  height: 100%;
           position: fixed;  top: 0;  width: calc(50% + 1px);
         }
         .container-preloader .loader-section.section-left {
@@ -374,16 +375,16 @@
           <!-- jQuery -->
         <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         <script>
-          $(document).ready(function() {
-            setTimeout(function() {
-              $('#container').addClass('loaded');
-              // Once the container has finished, the scroll appears
-              if ($('#container').hasClass('loaded')) {
-                // It is so that once the container is gone, the entire preloader section is deleted
-                $('#preloader').delay(50).queue(function() {
-                  $(this).remove();
-                });}
-            }, 5000);});
+            $(document).ready(function() {
+                setTimeout(function() {
+                  $('#container').addClass('loaded');
+                  // Once the container has finished, the scroll appears
+                  if ($('#container').hasClass('loaded')) {
+                    // It is so that once the container is gone, the entire preloader section is deleted
+                    $('#preloader').delay(50).queue(function() {
+                      $(this).remove();
+                    });}
+                }, 5000);});
         </script>
         <section id="project">
             <div class="project-heading">

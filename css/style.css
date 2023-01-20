@@ -174,6 +174,7 @@ nav{
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    border-color: #8845f4;
     /* text-transform: uppercase; */
 }
 
@@ -296,7 +297,16 @@ nav{
 .floating img:nth-child(7){
     animation-delay: 7s;
 } */
-@media(max-width: 991px){
+@media(max-width: 1070px){
+    .navbar-links li a:hover, .navbar-links li a.active{
+        color: red;
+        background: transparent;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+}
     .toggle-button{
         position: fixed;
         display: inline-block;

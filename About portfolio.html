@@ -20,6 +20,17 @@
         </head>
         <body>
         <style>
+            nav{
+                background: wheat;
+                position: fixed;
+                margin: 5.5em 0em .5em 0em;
+                width: 120%;
+                height: 7em;
+                z-index: 1;
+            }
+            .navbar-links{
+                margin-left: 4.5em;
+            }
             * {box-sizing: border-box}
 
             .contain {
@@ -28,19 +39,55 @@
             justify-content: space-between;
             }
 
+            @media screen and (max-width: 1070px) {
+                .vl {
+                  display: none;
+                }
+                .header{
+                  background: wheat;
+                }
+                .social{
+                  position: absolute;
+                  left: 77%;
+                  bottom: 270%;
+                }
+                .vl{
+                  display: none;
+                }
+                .side, .side-me, .left, .trapezoid, #html-spinner{
+                  display: none;
+                }
+                .fa-globe{
+                  position: relative;
+                }
+                .content{
+                  top: 30%;
+                  margin-left: 20%;
+                  width: 10%;
+                }
+            }
+
             .skills {
             text-align: right;
             height: 2px;
             color: black;
             }
+            
+            .html {width: 0%; background-color: hsl(131, 77%, 25%);}
+            .css {width: 0%; background-color: hsl(177, 77%, 25%);}
+            .js {width: 0%; background-color: hsl(52, 77%, 25%);}
+            .python {width: 0%; background-color: hsl(9, 77%, 25%);}
+            .SQL {width: 0%; background-color: hsl(202, 77%, 25%);}
+            .ML {width: 0%; background-color: hsl(0, 77%, 25%);}
+            .Design {width: 0%; background-color: hsl(63, 77%, 25%);}
 
-            .html {width: 98.7%; background-color: hsl(131, 77%, 25%);}
-                .css {width: 94.2%; background-color: hsl(177, 77%, 25%);}
-                .js {width: 79.5%; background-color: hsl(52, 77%, 25%);}
-                .python {width: 84%; background-color: hsl(9, 77%, 25%)}
-                .SQL {width: 20%; background-color: hsl(202, 77%, 25%);}
-                .ML {width: 9%; background-color: hsl(0, 77%, 25%);}
-                .Design {width: 69%; background-color: hsl(63, 77%, 25%);}
+            .html.ac {width: 98.7%; background-color: hsl(131, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .css.ac {width: 94.2%; background-color: hsl(177, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .js.ac {width: 79.5%; background-color: hsl(52, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .python.ac {width: 69%; background-color: hsl(9, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .SQL.ac {width: 12%; background-color: hsl(202, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .ML.ac {width: 10%; background-color: hsl(0, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
+            .Design.ac {width: 69%; background-color: hsl(63, 77%, 25%); animation-name: foward; transition: ease-in-out 3.2s;}
             html, body {
                 max-width: 100%;
                 overflow-x: hidden;
@@ -73,7 +120,7 @@
                 width: 150px;
             }
             .head{
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
             .content-section{
                 margin-top: 100px;
@@ -82,6 +129,7 @@
                 margin-top: 4%;
                 margin-bottom: 5%;
             }
+            .all-skills{margin-bottom: 5%; width: 39%; float: right;}
             @media(max-width: 990px){
                 .container{
                     width: 100%;
@@ -185,18 +233,10 @@
                     font-family: "Lucida Console", "Courier New", monospace;
                 }
                 .skills {
-                text-align: right;
-                height: 5px;
-                color: black;
+                    text-align: right;
+                    height: 5px;
+                    color: black;
                 }
-    
-                .html {width: 98.7%; background-color: hsl(131, 77%, 25%);}
-                .css {width: 94.2%; background-color: hsl(177, 77%, 25%);}
-                .js {width: 79.5%; background-color: hsl(52, 77%, 25%);}
-                .python {width: 84%; background-color: hsl(9, 77%, 25%)}
-                .SQL {width: 12%; background-color: hsl(202, 77%, 25%);}
-                .ML {width: 9%; background-color: hsl(0, 77%, 25%);}
-                .Design {width: 67%; background-color: hsl(63, 77%, 25%);}
                 .head{
                     font-size: 2.7em;
                     margin-bottom: 10%;
@@ -220,7 +260,20 @@
                     display: none;
                 }
                 .pie{
-                    margin-top: 20%;
+                    margin-top: 22%;
+                    text-align: center;
+                }
+                .our-skills, .size{
+                    font-size: 1em;
+                }
+                .all-skills{
+                    font-size: 1em;
+                    margin-right: 11em;
+                    text-align: center;
+                }
+                .contain{
+                    text-align: center;
+                    width: 140%;
                 }
             }
             @media(max-width: 768px){
@@ -614,6 +667,14 @@
               .container-preloader .animation-preloader .txt-loading {
                 font: bold 2em 'Montserrat', sans-serif;
               }}
+            .hi{
+                margin-left: 1.4%;
+                position: absolute;
+            }
+            .a-color:hover{
+                box-shadow: 2px 2px 2px 5px black;
+                color: blue;
+            }
         </style>
         <div id="preloader">
             <div id="container" class="container-preloader">
@@ -655,33 +716,74 @@
                 });}
             }, 5000);});
         </script>
+        <div class="header" style="background: transparent;">
+            <nav class="navbar">
+                <div class="brand-title">MarvCode</div>
+                <!-- <i class="fa fa-bars" style="left: 0;"></i> -->
+                <!-- <a href="javascript:void(0);" class="icon" onclick="myFunction()" class="toggle-button" id="navy">
+                    <i class="fa fa-bars" style="left: 0;"></i>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a> -->
+                <div class="toggle-button" style="background: transparent;" onclick="nav(this)" id="navy">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+                <script>
+                    function nav(x){
+                        x.classList.toggle("change");
+                        var x = document.getElementById('nav');
+                        if (x.style.display == 'block') {
+                        x.style.display = 'none';
+                        }
+                        else {
+                        x.style.display = 'block';
+                        }
+                    }
+                </script>
+                <div class="navbar-links" id="nav">
+                    <ul>
+                        <li><i class="fas fa-home hi"></i><a href="index.html" class="hi1">Home</a></li>
+                        <li><i class="fas fa-address-card hi"></i><a href="About portfolio.html" class="hi1 active">About</a>
+                        </li>
+                        <li><i class="fas fa-briefcase hi"></i><a href="project.html" class="hi1">Project</a></li>
+                        <li><i class="fas fa-comments hi"></i><a href="Contact us.html" target="-blank" class="hi1">Feedback</a></li>
+                        <li><i class="fa fa-globe hi"></i><a href="https://avonpat.websites.co.in" target="-blank" class="hi1">Website</a>
+                        </li>
+                        <li><i class="fas fa-blog hi"></i><a href="https://marvcode.blogspot.com" target="-blank" class="hi1">Blog</a></li>
+                    </ul>   
+                </div>
+            </nav>
+        </div>
         <div class="tri"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
         <div class="mid"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
         <div class="down"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
-        <section id="about"><h1>About</h1>
+        <section id="about" class="all-body"><h1>About</h1>
             <section class="col-md-7 about-right">
                 <h2 class="color-3" style="margin-left: 200px;"><b>About Me</b></h2>
                 <p class="p-first text-white" style="margin-left: 200px;">
                     Welcome to MarvCode portfolio Website.
                     This website was developed by Marvel Ukpong.
-                    <br><br>I and my team are a groups of web Designers, Developers and Marketers. I am a Python/Django Developer.
-                    Together as a team we create websites, fun games, and web apps. I also aspire to be a Robotics Engineer. You can read more about myself by clicking the Resume link <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format, and learn more about my team by visiting their linkedin page. This website exhibits my skills, knowledge and works that I have acquired and worked on in teams over time.
+                    <br><br>I and my team are a groups of Web Designers, Developers and Marketers. I am a Python/Django Developer.
+                    Together as a team we create websites, fun games, and web apps. I also aspire to be a Robotics Engineer. You can read more about myself in <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format of the Resume, and learn more about my team by visiting their linkedin page. This website exhibits my skills, knowledge and works that I have acquired and worked on in teams over time.
                     <!-- <br><br>You could also hit the subscribe button if you want to know more on coding for free.
                     Links will be sent to your gmail account once you have subscribed. -->
                 </p>
             </section>
             <br><br><br><br><br><br>
-            <section class="container">
+            <section class="container all-body">
                 <h2>Experience</h2>
                 <div class="experience-items">
                     <h3>Python/Django Web Developer</h3>
-                    <p class="purple-color">2020 - Present | Entry Level developer</p>
+                    <a href="My Resume.html" target="_blank" style="text-decoration: none;"><p class="purple-color">2022 - Present | Entry Level developer</p></a>
                     <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus till the course ended, and have acquired certificates on them. Over 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank" class="a-color">here</a>.</p>
                 </div>
             </section>
         </section>
         <div class="curve-line"><img src="Marvcode Images/Curve-2.png" alt="line"></div>
-        <div class="content-section">
+        <div class="content-section all-body">
             <p><h1 class="head" id="team">Meet<br><br><br> My<br><br><br> Team <br><br></h1>
             <div class="hero">
                 <div class="team-member-thumb">
@@ -767,7 +869,7 @@
             <header style="color: rgb(13, 13, 64); text-align: center; font-size: 1.5em;">Our Services and skills</header>
             <div class="col" no-gutters>
                 <div class="leftside">
-                    <div class="services-items">
+                    <div class="services-items all-body">
                             <h3>-Software development</h3>
                             <p>We help build highly functional softwares for the world's advancement.</p>
                             <h3>-Web development</h3>
@@ -783,8 +885,8 @@
                 </div>
             </div>
         </div><br><br><br><br><br><br><br><br>
-        <div style="margin-bottom: 5%; width: 39%; float: right;">
-            <h1 class="head" style="color: rgba(8, 51, 126, 0.777); text-align: center; margin-bottom: 10%;">Our skills and knowledge</h1>
+        <div class="all-body all-skills">
+            <h1 class="head our-skills" style="color: rgba(8, 51, 126, 0.777); text-align: center; margin-bottom: 10%;">Our skills and knowledge</h1>
             <p class="size" style="color: rgb(27, 24, 24);">HTML</p>
             <div class="contain">
             <div class="skills html">98.7%</div>
@@ -802,18 +904,18 @@
 
             <p class="size" style="color: rgb(27, 24, 24);">Python/Django</p>
             <div class="contain">
-            <div class="skills python">84%</div>
+            <div class="skills python">69%</div>
             </div>
 
 
             <p class="size" style="color: rgb(27, 24, 24);">SQL</p>
             <div class="contain">
-            <div class="skills SQL">20%</div>
+            <div class="skills SQL">12%</div>
             </div>
 
             <p class="size" style="color: rgb(27, 24, 24);">ML</p>
             <div class="contain">
-            <div class="skills ML">9%</div>
+            <div class="skills ML">10%</div>
             </div>
 
             <p class="size" style="color: rgb(27, 24, 24);">Product Design</p>
@@ -821,15 +923,12 @@
             <div class="skills Design">69%</div>
             </div>
         </div>
-        <div class="pie"><img src="Marvcode Images/pie.png" alt="chart diagram"></div>
-        <section><br><br><br><br>
+        <div class="pie"><img src="Marvcode Images/pie.png" alt="chart diagram"></div><br>
+        <section><br><br><br><br><br><br>
             <footer>
                 <aside>&copy2022 Marvcode, Software Developer</aside>
             </footer>
         </section>
-        <a href="index.html" class="size">
-            <button class="btn">&DoubleLeftArrow; Back</button>
-        </a>
         <script>
             // vars
             'use strict'
@@ -887,8 +986,24 @@
                 playSlide(currentSlide);
 
             }
-            
-
+        </script>
+        <script>
+            function reveal(){
+                var reveals = document.querySelectorAll(".all-body, .html, .css, .python, .js, .SQL, .ML, .Design")
+                for(var i = 0; i < reveals.length; i++){
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+                    if(elementTop < windowHeight - elementVisible){
+                        reveals[i].classList.add("ac");
+                    }
+                    else{
+                        reveals[i].classList.remove("ac");
+                    }
+                }
+            }
+            window.addEventListener("scroll", reveal);
+            reveal();
         </script>
     </body>
 </html>

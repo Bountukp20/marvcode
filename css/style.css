@@ -21,9 +21,24 @@
 html {
   scroll-behavior: smooth;
 }
-
+.all-body{
+    animation-name: faded;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: 2.5s all ease;
+    animation-duration: 2s;
+}
+.all-body.ac{
+    transform: translateY(0);
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+}
 body {
     font-family: "Roboto", sans-serf;
+    overflow-x: hidden;
 }
 
 .container{

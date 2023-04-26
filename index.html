@@ -29,7 +29,6 @@
       <style>
         html, body {
             max-width: 100%;
-            overflow-x: hidden;
         }
         .social{
           height: 415px;
@@ -41,32 +40,32 @@
           right: 50px;
           transform: translateY(-50%);
         }
-          @media screen and (max-width: 1070px) {
-            .vl {
-              display: none;
-            }
-            .header{
-              background: wheat;
-            }
-            .social{
-              position: absolute;
-              left: 77%;
-              bottom: 270%;
-            }
-            .vl{
-              display: none;
-            }
-            .side, .side-me, .left, .trapezoid, #html-spinner{
-              display: none;
-            }
-            .fa-globe{
-              position: relative;
-            }
-            .content{
-              top: 30%;
-              margin-left: 20%;
-              width: 10%;
-            }
+        @media screen and (max-width: 1070px) {
+          .vl {
+            display: none;
+          }
+          .header{
+            background: wheat;
+          }
+          .social{
+            position: absolute;
+            left: 77%;
+            bottom: 270%;
+          }
+          .vl{
+            display: none;
+          }
+          .side, .side-me, .left, .trapezoid, #html-spinner{
+            display: none;
+          }
+          .fa-globe{
+            position: relative;
+          }
+          .content{
+            top: 30%;
+            margin-left: 20%;
+            width: 10%;
+          }
         }
         .icon-box{
           width: 50px;
@@ -376,7 +375,7 @@
         }, 4000);});
     </script>
       <!-- <?php include ("php/mail.php"); ?> -->
-        <section class="section">
+        <section class="section all-body">
             <div class="container" style="background: transparent; min-height: 800px; min-width: 470.5px;">
                 <div class="header">
                     <label class="logo" class="active"><img src="Marvcode Images/M.C Logo.png" title="MarvCode" width="50px" height="60px"></label>
@@ -497,6 +496,24 @@
                 <p class="footer">&copy2022 Marvcode, Software Developer</p>
             </footer>
         </section>
+        <script>
+          function reveal(){
+              var reveals = document.querySelectorAll(".all-body, .html, .css, .python, .js, .SQL, .ML, .Design")
+              for(var i = 0; i < reveals.length; i++){
+                  var windowHeight = window.innerHeight;
+                  var elementTop = reveals[i].getBoundingClientRect().top;
+                  var elementVisible = 150;
+                  if(elementTop < windowHeight - elementVisible){
+                      reveals[i].classList.add("ac");
+                  }
+                  else{
+                      reveals[i].classList.remove("ac");
+                  }
+              }
+          }
+          window.addEventListener("scroll", reveal);
+          reveal();
+      </script>
         <!-- <script>
             function myFunction() {
               var x = document.getElementById('nav');

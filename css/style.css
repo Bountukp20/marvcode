@@ -184,15 +184,17 @@ nav{
     color: rgb(228, 17, 55);
 }
 
-.dropdown-content a {
-    color: black;
+.dropdown-content a, #myList {
+    color: rgb(80, 73, 73);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     border-color: #8845f4;
     /* text-transform: uppercase; */
 }
-
+#myList{
+    cursor: pointer;
+}
 .dropdown-content a:hover {background-color: #f1f1f1;}
 
 .show {display:block;}
@@ -376,7 +378,7 @@ nav{
     .dropdown{
         left: 45%
     }
-    .dropdown-content a{
+    .dropdown-content a, #myList{
         text-transform: uppercase;
         font-size: 12px;
     }

@@ -496,7 +496,11 @@
                               <input type="button" value="Subscribe" style="color: blueviolet; background-color: rgb(80, 255, 252);">
                           </form> -->
                           <!-- <a href="#">Subscribe</a> -->
-                          <a href="Marvcode resume.pdf" download="My Resume"><i class="fa fa-download" aria-hidden="true"></i>Download</a>
+                          <button type="button" id="myList" style="background: transparent;"><i class="fa fa-download" aria-hidden="true"></i>Download</button>
+                          <div id="list" class="dropdown-content" style="background: black;">
+                            <a href="Marvcode resume.pdf" download="My Resume">Resume</a>
+                            <a href="My CV.pdf" download="My CV">CV</a>
+                          </div>
                           <a href="My Resume.html" target="_blank"><i class="fa fa-file" aria-hidden="true"></i>Resume</a>
                           <!-- change this to an icon -->
                           <a href="https://www.google.com" target="-blank"><i class="fas fa-search"></i>Search</a>
@@ -504,6 +508,13 @@
                       </div>
                 </div>
             </div>
+            <script>
+              document.getElementById("myList").onclick = function() {myFunctionTwo()};
+              /* myFunction toggles between adding and removing the show class, which is used to hide and show the dropdown content */
+              function myFunctionTwo() {
+                document.getElementById("list").classList.toggle("show");
+              }
+            </script>
             <footer>
                 <p class="footer">&copy2022 Marvcode, Software Developer</p>
             </footer>

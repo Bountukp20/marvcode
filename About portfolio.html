@@ -20,16 +20,21 @@
         </head>
         <body>
         <style>
+            .body {
+                width: fit-content;
+                height: fit-content;
+            }
+
             nav{
-                background: rgba(140, 145, 144, 0.73);
-                position: fixed;
-                margin: 5.5em 0em .5em 0em;
-                width: 120%;
+                background: transparent;
+                position: relative;
+                margin: 1em 0em 0em 13.5em;
+                width: 160%;
                 height: 7em;
                 z-index: 1;
             }
             .navbar-links{
-                margin-left: 4.5em;
+                margin-left: 4.8em;
             }
             * {box-sizing: border-box}
 
@@ -43,6 +48,9 @@
             }
 
             @media screen and (max-width: 1070px) {
+                nav{
+                    background: transparent;
+                }
                 .vl {
                   display: none;
                 }
@@ -777,14 +785,14 @@
         <div class="tri"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
         <div class="mid"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
         <div class="down"><img src="Marvcode Images/Polygon_1-removebg-preview.png" alt="img"></div>
-        <section id="about" class="all-body"><br><br><br><br><h1>About</h1>
+        <section id="about" class="all-body"><br><h1>About</h1>
             <section class="col-md-7 about-right">
                 <h2 class="color-3" style="margin: 20px; color: #009688;"><b>About Me</b></h2>
                 <p class="p-first text-white" style="margin: 20px;">
                     Welcome to MarvCode portfolio Website.
-                    This website was developed by Marvel Ukpong.
-                    <br><br>I and my team are a groups of Web Designers, Developers and Marketers. I am a Python/Django Developer.
-                    Together as a team we create websites, fun games, and web apps. I also aspire to be a Robotics Engineer. You can read more about myself in <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format of the Resume, and learn more about my team by visiting their linkedin page. This website exhibits my skills, knowledge and works that I have acquired and worked on in teams over time.
+                    This website is developed by Marvel Ukpong.
+                    <br><br>I and my team are a group of Web Designers, Programmers, Developers and Marketers. I am a Python/Django Developer.
+                    Together as a team we create websites, fun games, and bigger projects. I also aspire to be a Robotics Engineer. You can read more about myself in <a href="My Resume.html" target="_blank" class="a-color">here</a> or <a href="ResumeMV.rtf" download class="a-color">download</a> the rich text format of the Resume, and learn more about my team by visiting their linkedin page. This website exhibits my skills, knowledge and works that I have acquired and worked on in teams over time.
                     <!-- <br><br>You could also hit the subscribe button if you want to know more on coding for free.
                     Links will be sent to your gmail account once you have subscribed. -->
                 </p>
@@ -795,7 +803,7 @@
                 <div class="experience-items">
                     <h3>Python/Django Web Developer</h3>
                     <a href="My Resume.html" target="_blank" style="text-decoration: none;"><p class="purple-color">2022 - Present | Entry Level developer</p></a>
-                    <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I am a student with no work experience, but attended some Boot camps and been exposed to working in teams for 1 month plus till the course ended, and have acquired certificates on them. Over 9 months of learning I have acquired skills and passion for these languages: HTML/CSS, JavaScript, Python/Django and Java. Read more <a href="My Resume.html" target="_blank" class="a-color">here</a>.</p>
+                    <p class="size">I specialize on HTML, CSS, JavaScript and Django for web development. I have gained some experience in the tech industry and outside my field, and also took part in some Boot camp trainings and been exposed to working in teams overtime of learning, and have acquired certificates on them. Over 3 years of learning I have acquired skills and passion for these languages and scopes: HTML/CSS, JavaScript, Python/Django, ML and Data Science, Mysql, sql and postgres. Read more <a href="My Resume.html" target="_blank" class="a-color">here</a>.</p>
                 </div>
             </section>
         </section>
@@ -1015,7 +1023,7 @@
                         reveals[i].classList.add("ac");
                     }
                     else{
-                        reveals[i].classList.remove("ac");
+                        return
                     }
                 }
             }

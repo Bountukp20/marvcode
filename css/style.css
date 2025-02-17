@@ -360,7 +360,7 @@ nav {
     animation-delay: 7s;
 } */
 
-@media(max-width: 1070px) {
+@media screen and (max-width: 1070px) {
     .navbar-links li a:hover,
     .navbar-links li a.active {
         color: red;
@@ -610,7 +610,7 @@ nav #icon {
     display: none;
 }
 
-@media(max-width: 900px) {
+@media screen and (max-width: 900px){
     nav #icon {
         display: block;
         margin: auto;
@@ -696,7 +696,7 @@ footer {
     background-color: #2c3e50;
 }
 
-@media(max-width: 900px) {
+@media screen and (max-width: 900px){
     #home {
         background-color: #2c3e50;
         background-size: cover;
@@ -707,7 +707,7 @@ footer {
     }
 }
 
-@media(max-width: 768px) {
+@media screen and (max-width: 768px){
     #home {
         background-color: #2c3e50;
         background-size: cover;
@@ -771,7 +771,7 @@ section#portfolio {
     margin-bottom: 30px;
 }
 
-@media(max-width: 990px) {
+@media screen and (max-width: 990px){
     .btn {
         width: 10px;
         margin-right: 250px;
@@ -811,7 +811,7 @@ section#portfolio {
     }
 }
 
-@media(max-width: 768px) {
+@media screen and (max-width: 768px){
     #description {
         float: right;
         left: 5%;
@@ -869,7 +869,7 @@ section#portfolio {
     }
 }
 
-@media(max-width: 568px) {
+@media screen and (max-width: 568px){
     div[class~=d] {
         padding-bottom: 410px;
     }
@@ -935,7 +935,7 @@ p[class~=d] {
     cursor: pointer;
 }
 
-@media(max-width: 900px) {
+@media screen and (max-width: 900px){
     section#portfolio {
         min-height: 700px;
         border: 200px;
@@ -1322,7 +1322,7 @@ input[type=submit]:active {
 
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     .col-25,
     .col-75,
     input[type=submit] {
@@ -1336,7 +1336,7 @@ input[type=submit]:active {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
     .phone {
         font-size: 50px;
         text-decoration: 32px;
@@ -1405,7 +1405,7 @@ input:focus {
     background: #9fcaff;
 }
 
-@media(max-width: 990px) {
+@media screen and (max-width: 990px){
     body {
         max-width: 100%;
     }
@@ -1549,7 +1549,7 @@ input:focus {
     -o-transform: 0.6s ease;
 }
 
-@media(max-width: 940px) {
+@media screen and (max-width: 940px) {
     .content-section {
         display: grid;
         grid-template-columns: repeat(1, 1fr);

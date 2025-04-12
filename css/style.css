@@ -870,6 +870,9 @@ section#portfolio {
 }
 
 @media screen and (max-width: 568px){
+    .navbar-links li .fas, .navbar-links li .fa{
+        display: none;
+    }
     div[class~=d] {
         padding-bottom: 410px;
     }

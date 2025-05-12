@@ -1,0 +1,43 @@
+{
+	"folders": [
+		{
+			"path": "../react_app"
+		},
+		{
+			"path": "../marvcode_blog"
+		},
+		{
+			"path": "../Marvcode portfolio"
+		},
+		{
+			"path": "../justLap"
+		},
+		{
+			"path": "../Bincom_project"
+		},
+		{
+			"path": "."
+		},
+		{
+			"path": "../Hello"
+		},
+		{
+			"path": "../Business Marvcode/python project"
+		},
+		{
+			"path": "../codexio_project"
+		},
+		{
+			"path": "../codexio"
+		},
+		{
+			"path": "../Business Marvcode"
+		},
+		{
+			"path": "../Francis_Website"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "marvcode"
+	}
+}

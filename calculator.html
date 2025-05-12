@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Calculator</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color: rgb(16, 218, 170);
+        }
+        .container{
+            max-width: 400px;
+            margin: 10vh auto 0 auto;
+            box-shadow: 0px 0px 43px 17px rgb(248, 135, 109);
+            background-color: black;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        #display{
+            text-align: right;
+            height: 20vh;
+            line-height: 70px;
+            padding: 16px 8px;
+            font-size: 25px;
+            color: rgb(16, 218, 170);
+            background: black;
+        }
+        #output{
+            text-align: right;
+            height: 70px;
+            line-height: 70px;
+            padding-top: 10px;
+            font-size: 25px;
+        }
+        .result{
+            font-size: 18px;
+            padding: 25px;
+        }
+        @keyframes big {
+            0%{
+                font-size: 18px;
+            }
+            100%{
+                font-size: 30px;
+            }
+        }
+        @keyframes small {
+            0%{
+                font-size: 28px;
+            }
+            100%{
+                font-size: 18px;
+            }
+        }
+        .buttons{
+            display: grid;
+            border-bottom: 1px solid rgba(128, 128, 128, 0.359);
+            border-left: 1px solid rgba(128, 128, 128, 0.359);
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .buttons > div{
+            border-top: 1px solid grey;
+            border-right: 1px solid grey;
+        }
+        .buttons{
+            border: 0.5px solid grey;
+            line-height: 100px;
+            text-align: center;
+            font-size: 25px;
+            cursor: pointer;
+            color: rgb(2, 202, 149);
+            transition: all 0.3s ease-in-out;
+        }
+        #equal{
+            background-color: rgb(0, 255, 217);
+            color: black;
+        }
+        .button:hover{
+            background-color: rgba(128, 128, 128, 0.872);
+            color: bisque;
+            transition: 0.5s ease-in-out;
+            font-weight: bold;
+        }
+    </style>
+    <section style="color: coral;">
+        <div class="container" style="color: coral;">
+            <div id="display">
+                <div id="output"></div>
+                <div id="result"></div>
+            </div>
+            <div class="buttons">
+                <div class="button">AC</div>
+                <div class="button">Del</div>
+                <div class="button">%</div>
+                <div class="button">/</div>
+                <div class="button">7</div>
+                <div class="button">8</div>
+                <div class="button">9</div>
+                <div class="button">+</div>
+                <div class="button">4</div>
+                <div class="button">5</div>
+                <div class="button">6</div>
+                <div class="button">-</div>
+                <div class="button">1</div>
+                <div class="button">2</div>
+                <div class="button">3</div>
+                <div class="button">*</div>
+                <div class="button">.</div>
+                <div class="button" id="bracket">0</div>
+                <div class="button">00</div>
+                <div class="button" id="equal">=</div>
+            </div>
+        </div>
+    </section>
+    <script>
+        console.log('hello world');
+        let display = document.getElementById('display');
+        let output = document.getElementById('output');
+        let result = document.getElementById('result');
+
+        let buttons = Array.from(document.getElementsByClassName('button'));
+        buttons.map( button => {
+            button.addEventListener('click', (e) => {
+                switch(e.target.innerText){
+                    case 'AC':
+                        display.innerText = "0";
+                        result.innerText ="";
+                        case 'Del':
+                        if(display.innerText){
+                            display.innerText = display.innerText.slice(0, -1);
+                        }
+                        break;
+                        case '=':
+                            try{
+                                result.innerText = eval(display.innerText);
+                            }
+                            catch{
+                                display.innerText = 'Error!';
+                            }
+                            display.innerText = eval(display.innerText);
+                            break;
+                        default:
+                            display.innerText += e.target.innerText;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

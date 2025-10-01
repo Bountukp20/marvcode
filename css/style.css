@@ -78,6 +78,8 @@ label.logo {
     color: white;
     padding: 0 100px;
     line-height: 80px;
+    background: transparent;
+    border: 2px solid transparent;
 }
 
 .navbar-links ul ul {
@@ -1570,4 +1572,5 @@ input:focus {
 
 #register {
     padding-top: 150px;
+
 }

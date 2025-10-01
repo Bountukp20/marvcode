@@ -80,6 +80,7 @@ label.logo {
     line-height: 80px;
     background: transparent;
     border: 2px solid transparent;
+    border-radius: 20%;
 }
 
 .navbar-links ul ul {
@@ -1574,3 +1575,4 @@ input:focus {
     padding-top: 150px;
 
 }
+
